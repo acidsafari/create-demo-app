@@ -4,7 +4,7 @@ const Welcome = () => {
  
   return (
   <div className="Welcome">
-    <h2>Welcome</h2>
+    <h3>Welcome</h3>
             <blockquote cite="https://upjourney.com/lao-tzu-quotes">
             Do the difficult things while they are easy and do the great things while they are small. 
             A journey of a thousand miles must begin with a single step.

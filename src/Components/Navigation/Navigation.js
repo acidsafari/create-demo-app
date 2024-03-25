@@ -1,17 +1,37 @@
-import React from "react";
+import React,  { useState } from "react";
+import SearchBar from "./SearchBar.js";
 
 const Navigation = () => {
-
-  const navItems = ["Welcome", "Photo Gallery", "Weather Information", 
-    "Community Blog", "Contact Us", "Attractions", "Events", "Accomodation"];
-  const navList = navItems.map((nav,index) => <li key={index}>{nav}</li>);
+  const [selectedNavItem, setSelectedNavItem] = useState("welcome");
+  const navItems = [
+    { id: 1, title: "Welcome", name: "Welcome" },
+    { id: 2, title: "Photo Gallery", name: "PhotoGallery" },
+    { id: 3, title: "Weather Information", name: "WeatherInformation" },
+    { id: 4, title: "Community Blog", name: "CommunityBlog" },
+    { id: 5, title: "Contact Us", name: "ContactUs" },
+    { id: 6, title: "Attractions", name: "Attractions" },
+    { id: 7, title: "Events", name: "Events" },
+    { id: 8, title: "Acommodation", name: "Acommodation" },
+  ];
 
   return (
-    <div>
-      <h3>Navigation</h3>
-      <ul>{navList}</ul>
+    <div className="Navigation">
+      <ul className="NavigationMenus">
+        {navItems.map((item) => {
+          return (
+            <li
+              key={item.id}
+              onClick={() => setSelectedNavItem(item.name)}
+              className={selectedNavItem === item.name ? `activeNavItem` : ""}
+            >
+              <a href={`#${item.name}`}>{item.title}</a>
+            </li>
+          );
+        })}
+      </ul>
+      const 
     </div>
-    );
+  );
 };
 
 export default Navigation;

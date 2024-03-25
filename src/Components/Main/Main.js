@@ -1,6 +1,7 @@
 import React from "react";
 import Welcome from "./Welcome";
-import Weather from "./WeatherInformation";
+import PhotoGallery from "./PhotoGallery";
+import WeatherInformation from "./WeatherInformation";
 import CommunityBlog from "./CommunityBlog";
 import Blog from "./Blog"; // Imported this for the blog
 import ContactUs from "./ContactUs";
@@ -11,7 +12,8 @@ const Main = () => {
   return (
     <div className="Main">
       <Welcome />
-      <Weather />
+      <PhotoGallery />
+      <WeatherInformation />
       <CommunityBlog />
         <div className="Blog"> 
           <Blog text={blogText}/>
