@@ -5,14 +5,17 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Aside from "./Components/Aside/Aside";
 import Footer from "./Components/Footer/Footer";
+//import NavigationToo from './Components/Navigation/NavigationToo';
 
 function App() {
   return (
     <div className="App">
         <Navigation />
         <Header />
-        <Main />
-        <Aside />
+        <div className='MainAside'>
+          <Main />
+          <Aside />
+        </div>
         <Footer />
     </div>
   );

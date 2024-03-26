@@ -38,56 +38,25 @@ blockquote {
 
 /* || navigation layout */
 
-/* FROM my CODE
 .Navigation {
   color: #d3d3d3;
   background-color: #000000;
-  height: 70px;
   width: 100%;
   padding: 5px;
-  margin-bottom: 10px;
-  display: flex;
   box-align: middle;
   position: fixed;
   top: 0;
   z-index: 999;
-}
-
-ul.Navigation {
   display: flex;
+  flex-direction: row;
   flex: 2;
+}
+
+.SearchBar {
   align-items: center;
-  padding: 1;
-  list-style-type: none;
-}
-
-ul.Navigation li {
-  display: inline;
-  text-align: center;
-  flex: 1;
-  list-style: none;
-  margin-right: 30px;
-}
-
-ul.Navigation li a {
-  display: inline-block;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #9b9b9b;
+  padding: 0;
   position: relative;
   padding-bottom: 5px;
-}
-*/
-.Navigation {
-  color: #d3d3d3;
-  background-color: #000000;
-  width: 100%;
-  padding: 5px;
-  box-align: middle;
-  position: fixed;
-  top: 0;
-  z-index: 999;
 }
 
 ul.NavigationMenus {
@@ -149,10 +118,20 @@ li.activeNavItem a:after{
 
 /* || main layout */
 
-.Main {
+.MainAside {
   display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  flex: 2;
+}
+
+.Main {
+  width: 70%;
+  display: flex;
+  flex-basis: auto;
   flex-direction: column;
   overflow: hidden;
+  flex: 3;
 }
 
 a {
@@ -189,13 +168,10 @@ a:active {
   font-variant: small-caps;
 }
 
-
-.Main {
-  display: flex;
-}
 .Heading {
   flex: 0 0 100%;
 }
+
 .MainSection {
   display: flex;
   flex-direction: column;
@@ -204,26 +180,69 @@ a:active {
   font-variant: small-caps;
 }
 
+/* Photo Gallery */
+.PhotoGallery {
+  display: flex;
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: center;
+}
 
+/* Weather Information */
 .WeatherInformation {
   display: flex;
-  flex-wrap: wrap; 
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: center;
 }
+
+/* Forecast Table */
+table {
+  width:100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: #D6EEEE;
+}
+
+th {
+  text-align: left;
+}
+
+/* Community Blog */
 .CommunityBlog {
   color: #000000;
-  background-color: #d3d3d3;  
-}
-table {
-  border: 1px solid #000000;
-  width: 100%;
-}
-.AsideSection {
-  color: #d3d3d3;
-  background-color: #000000;
+  background-color: #d3d3d3;
   display: flex;
-  flex-direction: column;
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: center;
 }
+
+/* Contact Us */
+
+/* ASIDE */
+.AsideSection {
+  width: 30%;
+  flex-basis: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #000000;
+  color: #9b9b9b;
+  float: right;
+}
+
+/* FOOTER */
 .Footer {
+  margin-top: 10px;
   clear: both;
   color: #d3d3d3;
   background-color: #000000;

@@ -23,7 +23,7 @@ export class PhotoGallery extends Component {
     render() {
       const {searchTerm} = this.props;
       return (
-        <div>
+        <div className="PhotoGallery">
             <div>
                 <h3>Photo Gallery</h3>
             </div>
