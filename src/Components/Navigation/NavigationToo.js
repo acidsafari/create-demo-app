@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import SearchBar from "./SearchBar.js";
 
-const Navigation = () => {
+const NavigationToo = () => {
   const [selectedNavItem, setSelectedNavItem] = useState("welcome");
   const navItems = [
     { id: 1, title: "Welcome", name: "Welcome" },
@@ -29,11 +28,15 @@ const Navigation = () => {
           );
         })}
       </ul> 
-      <div className="SearchBar">
-        <SearchBar />
+
+      <div className="NavigationMenus">
+        <form method="get">
+            <input type="search" name="query" placeholder="Search for" />
+            <input type="submit" value="Search" />
+        </form>
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default NavigationToo;

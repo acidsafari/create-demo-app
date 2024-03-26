@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <div className="Header">
-        <h2>Header</h2>
+        <h2>Creative Demonstration app</h2>
     </div>
   );
 } 

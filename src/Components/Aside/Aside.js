@@ -1,12 +1,16 @@
 // Aside.js
 
 import React from "react";
-import PhotoGallery from "./PhotoGallery";
+import Attractions from "./Attractions";
+import Events from "./Events";
+import Acommodation from "./Acommodation";
 
 const Aside = () => {
     return (
         <div className="AsideSection">
-            <PhotoGallery />
+            <Attractions />
+            <Events />
+            <Acommodation />
         </div>
     );
 };

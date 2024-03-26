@@ -1,38 +1,262 @@
-.App {
+/* || typography */
+
+h1, h2, h3 {
+  font-family: 'Helvetica', cursive;
+  color: #2a2a2a;
+}
+
+p, input, li {
+  font-family: 'Helvetica', sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: #2a2a2a;
+  text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 2.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p, li {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+blockquote {
+  font-style: italic;
+  background-color: rgba(212, 212, 212, 0.914);
+}
+
+/* || navigation layout */
+
+.Navigation {
+  color: #d3d3d3;
+  background-color: #000000;
+  width: 100%;
+  padding: 5px;
+  box-align: middle;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+}
+
+.SearchBar {
+  align-items: center;
+  padding: 0;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+ul.NavigationMenus {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+ul.NavigationMenus li {
+  list-style: none;
+  margin-right: 30px;
+}
+
+ul.NavigationMenus li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+ul.NavigationMenus li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 1px;
+  width: 0%;
+  bottom: 0;
+  transition: 0.3s;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+}
+
+ul.NavigationMenus li a:hover:after{
+  width: 100%;
+  transition: 0.3s;
+}
+
+.activeNavItem a:after{
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 1px;
+  width: 100% !important;
+  bottom: 0;
+  transition: 0.3s;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  color:hotpink !important;
+}
+
+li.activeNavItem a:after{
+  background: #f2f2f270!important;
+} 
+
+/* || main layout */
+
+.MainAside {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  flex: 2;
+}
+
+.Main {
+  width: 70%;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 3;
+}
+
+a {
+  text-decoration: none;
+  color: #00FFFF;
+}
+
+a:visited {
+  color: #FF00FF;
+}
+
+a:hover {
+  color: #AAFFFF;
+}
+
+a:focus {
+  color: #AAFFFF;
+}
+
+a:active {
+  color: #00FFFF;
+}
+
+/* || header layout */
+.Header {
+  width: 100%;
+  background-image: url("./Components/images/header_background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  margin-top: 60px;
+}
+.Header h1 {
+  font-variant: small-caps;
+}
+
+.Heading {
+  flex: 0 0 100%;
+}
+
+.MainSection {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.MainSection h2 {
+  font-variant: small-caps;
+}
+
+/* Photo Gallery */
+.PhotoGallery {
+  display: flex;
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Weather Information */
+.WeatherInformation {
+  display: flex;
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Forecast Table */
+table {
+  width:100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: #D6EEEE;
+}
+
+th {
+  text-align: left;
+}
+
+/* Community Blog */
+.CommunityBlog {
+  color: #000000;
+  background-color: #d3d3d3;
+  display: flex;
+  flex: 2;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Contact Us */
+
+/* ASIDE */
+.AsideSection {
+  width: 30%;
+  flex-basis: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #000000;
+  color: #9b9b9b;
+  float: right;
+}
+
+/* FOOTER */
+.Footer {
+  margin-top: 10px;
+  clear: both;
+  color: #d3d3d3;
+  background-color: #000000;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .Main {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .Header {
+    margin-top: 20px;
   }
+
 }
