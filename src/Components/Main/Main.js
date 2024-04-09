@@ -5,6 +5,7 @@ import WeatherInformation from "./WeatherInformation";
 import CommunityBlog from "./CommunityBlog";
 import Blog from "./Blog"; // Imported this for the blog
 import ContactUs from "./ContactUs";
+import PhotoG2 from "./PhotoG2";
 
 const Main = () => {
 // Added blogText have a blog to display, you could use a JSON of blogs if you like
@@ -13,6 +14,7 @@ const Main = () => {
     <div className="Main">
       <Welcome />
       <PhotoGallery />
+      
       <WeatherInformation />
       <CommunityBlog />
         <div className="Blog"> 
