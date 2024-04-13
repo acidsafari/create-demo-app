@@ -1,17 +1,10 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import "./Main.css";
 
 //import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 
 
-const createCarouselItemImage = (index, photo, title = {}) => (
-    <div key={index}>
-        <img src={`/images/${photo}.png`} />
-        <p className="legend">{`${title}`}</p>
-    </div>
-);
 
 
 const photogalleryList = [
@@ -79,7 +72,7 @@ const getConfigurableProps = () => ({
 });
 */
 
-const PhotoG2 = () => {
+const PhotoG2 = (photogalleryList) => {
 
     const baseChildren = (photogalleryList) => <div>{
         photogalleryList.map(createCarouselItemImage)
@@ -89,10 +82,19 @@ const PhotoG2 = () => {
         showArrows: true,
     });
 
+    const createCarouselItemImage = (index, photo, title = {}) => (
+        <div key={index}>
+            <img src={`/images/${photo}.png`} />
+            <p className="legend">{`${title}`}</p>
+        </div>
+    );
+    
+
 
     return (
         <div className="PhotoG2" id="PhotoG2">
             <h3>Carousel</h3>
+            
             <Carousel {...getConfigurableProps()}>
                 {baseChildren.props.children}
             </Carousel>

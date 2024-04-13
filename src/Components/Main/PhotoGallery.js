@@ -12,15 +12,18 @@ const PhotoGallery = () => {
         onClickItem={onClickItem} onClickThumb={onClickThumb}*/
         >
         <div>
-          <img src="./images/dummy.png" />
+          <img src="./images/dummy.png"
+            alt='Photo1' />
           <p className="legend">Photo 1</p>
         </div>
         <div>
-          <img src="src/images/dummy.png" />
+          <img src="src/images/dummy.png"
+            alt='Photo2' />
           <p className="legend">Photo 2</p>
         </div>
         <div>
-          <img src="src/images/dummy.png" />
+          <img src="src/images/dummy.png"
+            alt='Photo3' />
           <p className="legend">Photo 3</p>
         </div>
       </Carousel>
