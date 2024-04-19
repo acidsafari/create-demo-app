@@ -5,6 +5,7 @@ import WeatherInformation from "./WeatherInformation";
 import CommunityBlog from "./CommunityBlog";
 import Blog from "./Blog"; // Imported this for the blog
 import ContactUs from "./ContactUs";
+import "./Main.css";
 
 const Main = () => {
 // Added blogText have a blog to display, you could use a JSON of blogs if you like
