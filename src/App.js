@@ -5,13 +5,17 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Aside from "./Components/Aside/Aside";
 import Footer from "./Components/Footer/Footer";
-//import NavigationToo from './Components/Navigation/NavigationToo';
+import ErrorBoundary from "./Components/ErrorBoundaries/ErrorBoundaries.js";
 
 function App() {
   return (
     <div className="App">
-        <Navigation />
-        <Header />
+        <React.StrictMode>
+          <ErrorBoundary>
+            <Navigation />
+          </ErrorBoundary>  
+        </React.StrictMode>
+          <Header />
         <div className='MainAside'>
           <Main />
           <Aside />
